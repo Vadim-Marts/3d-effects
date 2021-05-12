@@ -7,8 +7,12 @@
   color: black;
 }
 
-.blue {
+.container--blue {
   background-color: cornflowerblue;
+}
+
+.container--black {
+  background: radial-gradient(#333, #000);
 }
 
 .container {
@@ -16,9 +20,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
+  overflow: hidden;
 }
-
 .container__title {
   position: absolute;
   top: 50px;
@@ -35,7 +38,7 @@
   top: 0;
   left: 0;
   padding: 20px;
-  background-color: darkblue;
+  background-color: rgba(0, 0, 139, 0.5);
 }
 .menu__item {
   margin-right: 30px;
@@ -179,6 +182,117 @@
   }
   50% {
     transform: translateZ(100px);
+  }
+}
+.descending_leaves {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.descending_leaves__title {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  font-family: courier new;
+}
+.descending_leaves__item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.descending_leaves__image {
+  position: absolute;
+  display: block;
+  opacity: 0;
+}
+.descending_leaves__image:nth-child(1) {
+  left: 20%;
+  animation: descending_leaves 15s linear infinite;
+}
+.descending_leaves__image:nth-child(2) {
+  left: 40%;
+  animation: descending_leaves 25s linear infinite;
+}
+.descending_leaves__image:nth-child(3) {
+  left: 75%;
+  animation: descending_leaves 10s linear infinite;
+}
+.descending_leaves__image:nth-child(4) {
+  left: 60%;
+  animation: descending_leaves 20s linear infinite;
+}
+.descending_leaves__image:nth-child(5) {
+  left: 90%;
+  animation: descending_leaves 22s linear infinite;
+}
+.descending_leaves__image:nth-child(6) {
+  left: 100%;
+  animation: descending_leaves 8s linear infinite;
+}
+.descending_leaves__image:nth-child(7) {
+  left: 0%;
+  animation: descending_leaves 10s linear infinite;
+}
+.descending_leaves__image:nth-child(8) {
+  left: 35%;
+  animation: descending_leaves 30s linear infinite;
+}
+.descending_leaves__image:nth-child(9) {
+  left: 45%;
+  animation: descending_leaves 5s linear infinite;
+}
+.descending_leaves__item--2 {
+  position: absolute;
+  transform: scale(2) rotateY(180deg);
+}
+.descending_leaves__item--2 .descending_leaves__image {
+  animation-delay: 1.5s;
+}
+.descending_leaves__item--2 .descending_leaves__image img {
+  filter: blur(2px);
+}
+.descending_leaves__item--3 {
+  position: absolute;
+  transform: scale(0.8) rotateX(180deg);
+}
+.descending_leaves__item--3 .descending_leaves__image {
+  animation-delay: 2.5s;
+}
+.descending_leaves__item--3 .descending_leaves__image img {
+  filter: blur(1px);
+}
+
+@keyframes descending_leaves {
+  0% {
+    opacity: 0;
+    top: -5%;
+    transform: translateY(-20px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-20px) rotate(90deg);
+  }
+  60% {
+    transform: translateY(-20px) rotate(135deg);
+  }
+  80% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(-20px) rotate(225deg);
+    top: 105%;
   }
 }
 
