@@ -22,10 +22,13 @@
     <li class="menu__item">
       <a class="menu__item-link" href="#descending_leaves">Descend Leaves</a>
     </li>
+    <li class="menu__item">
+      <a class="menu__item-link" href="#card">Card</a>
+    </li>
   </ul>
 
-  <div class="container container--blue">
-    <div class="waves" id="waves">
+  <div class="container container--blue" id="waves">
+    <div class="waves">
       <span></span>
       <span></span>
       <span></span>
@@ -77,6 +80,54 @@
         <div class="descending_leaves__image"><img src="images/leaf3.png"></div>
       </div>
       </div>
+  </div>
+
+  <div class="container container--black">
+    <div class="container__inner">
+      <div class="card" id="card">
+        <div class="card__img-box">
+          <img class="card__img" src="images/shoes.png" alt="shoes">
+        </div>
+        <div class="card__content-box">
+          <h2 class="card__title">Tennis Shoes</h2>
+          <div class="card__size">
+            <h3 class="card__size-title">Size: </h3>
+            <div class="card__size-item">
+              <input type="radio" name="size" id="size_1">
+              <label for="size_1">7</label>
+            </div>
+            <div class="card__size-item">
+              <input type="radio" name="size" id="size_2">
+              <label for="size_2">8</label>
+            </div>
+            <div class="card__size-item">
+              <input type="radio" name="size" id="size_3">
+              <label for="size_3">9</label>
+            </div>
+            <div class="card__size-item">
+              <input type="radio" name="size" id="size_4">
+              <label for="size_4">10</label>
+            </div>
+          </div>
+          <div class="card__color">
+            <h3 class="card__color-title">Color: </h3>
+            <div class="card__color-item">
+              <input type="radio" name="color" id="color_1">
+              <label class="card__color-item--green" for="color_1"></label>
+            </div>
+            <div class="card__color-item">
+              <input type="radio" name="color" id="color_2">
+              <label class="card__color-item--blue" for="color_2"></label>
+            </div>
+            <div class="card__color-item">
+              <input type="radio" name="color" id="color_3">
+              <label class="card__color-item--red" for="color_3"></label>
+            </div>
+          </div>
+          <button class="card__btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script/script.js"></script>
